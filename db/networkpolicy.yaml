@@ -5,7 +5,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      name: mssql-deployment
+      app: mssql
   ingress:
     - ports:
         - protocol: TCP
