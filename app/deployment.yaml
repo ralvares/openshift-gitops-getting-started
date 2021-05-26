@@ -3,27 +3,27 @@ kind: Deployment
 metadata:
   annotations:
   labels:
-    app: spring-petclinic
+    app: hello-openshift
     app.kubernetes.io/component: web
-    app.kubernetes.io/instance: spring-petclinic
-    app.kubernetes.io/name: spring-petclinic
-    app.kubernetes.io/part-of: spring-petclinic
+    app.kubernetes.io/instance: hello-openshift
+    app.kubernetes.io/name: hello-openshift
+    app.kubernetes.io/part-of: hello-openshift
     app.openshift.io/runtime: java
-  name: spring-petclinic
+  name: hello-openshift
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: spring-petclinic
+      app: hello-openshift
   template:
     metadata:
       labels:
-        app: spring-petclinic
+        app: hello-openshift
     spec:
       containers:
-      - name: spring-petclinic
+      - name: hello-openshift
         imagePullPolicy: Always
-        image: quay.io/siamaksade/spring-petclinic:latest
+        image: openshift/hello-openshift
         livenessProbe:
           failureThreshold: 3
           httpGet:
