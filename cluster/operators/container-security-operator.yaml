@@ -3,7 +3,7 @@ kind: Subscription
 metadata:
   name: container-security-operator
   namespace: openshift-operators
- annotations:
+  annotations:
     argocd.argoproj.io/sync-options: Prune=true
     argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
