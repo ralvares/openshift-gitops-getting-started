@@ -2,6 +2,8 @@ apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
   annotations:
+    argocd.argoproj.io/sync-options: Prune=true
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
     machine.openshift.io/GPU: '0'
     machine.openshift.io/memoryMb: '16384'
     machine.openshift.io/vCPU: '4'
