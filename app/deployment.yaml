@@ -23,7 +23,7 @@ spec:
       containers:
       - name: hello-openshift
         imagePullPolicy: Always
-        image: openshift/hello-openshift
+        image: image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
         livenessProbe:
           failureThreshold: 3
           httpGet:
